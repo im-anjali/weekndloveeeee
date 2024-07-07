@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./star.jpg);
+    background-size: cover; /* Makes the background image cover the entire page */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center center; /* Centers the image on the page */
+    background-attachment: fixed; /* Ensures the background image stays fixed during scrolling */ 
+}
+.box{
+   background-color: grey;
+    text-shadow: 2px 2px 3px black;
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 200px;
+    width: 400px;
+   margin: 10px;
+   border-radius: 20px;
+   box-shadow: 2px 4px 5px rgb(0,0,0,0.3);
+   transform: translateX(400%);
+   transition: transform 0.4s ease;
+}
+
+body{
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+.box.show{
+    transform: translateX(0);
+}
+
+.box:nth-of-type(odd) {
+    transform: translateX(400%);
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.box.show:nth-of-type(odd) {
+    transform: translateX(0);
+}
+
+.box.show:nth-of-type(even) {
+    transform: translateX(0);
+}
+h2{
+    font-size: 45px;
+}
+.box img {
+    max-width: 100%; /* Ensures the image does not exceed the width of its container */
+    max-height: 100%; /* Ensures the image does not exceed the height of its container */
+    display: block; /* Removes any inline-block spacing */
+    object-fit: cover; /* Scales the image to cover the entire box */
+    position: absolute; /* Allows absolute positioning inside .box */
+    top: 0;
+    left: 0;
+   
+    bottom: 0;
+    margin: auto; /* Centers the image within .box */
+}
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+   /* transition: background-color 0.3s ease; */
+    margin-left: 120px;
+}
+
+
